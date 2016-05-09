@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+            <meta charset="UTF-8">
+            <title>Seznam sporocil</title>
+    </head>
+
+    <body>
+            <h1>Seznam sporočil</h1>
+
+            <p>{{ trenutni_vnosi }}</p>
+            <hr>
+            {% for sporocilo in trenutni_vnosi %}
+                <p><a href="/sporocilo/{{ sporocilo.key.id() }}">{{ sporocilo.vnos }} ({{ sporocilo.nastanek }})</a></p>
+            {% endfor %}
+    </body>
+</html>
